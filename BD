@@ -1,0 +1,136 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.1
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tempo de Geração: Jun 18, 2014 as 10:37 AM
+-- Versão do Servidor: 5.0.45
+-- Versão do PHP: 5.2.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Banco de Dados: `bd-sebrae`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `desp_capital`
+-- 
+
+CREATE TABLE `desp_capital` (
+  `iddesp_capital` int(11) NOT NULL auto_increment,
+  `tipo_desp_capital` varchar(50) NOT NULL,
+  `desp_cap_ano` int(11) NOT NULL,
+  `desp_cap_periodo` date NOT NULL,
+  `desp_cap_prev_ajustado` int(11) NOT NULL,
+  `desp_cap_prev_periodo` int(11) NOT NULL,
+  `desp_cap_exec_periodo` int(11) NOT NULL,
+  `desp_cap_total_prev_ajustado` int(11) NOT NULL,
+  `desp_cap_total_prev_periodo` int(11) NOT NULL,
+  `desp_cap_total_exec_periodo` int(11) NOT NULL,
+  `desp_cap_porc_periodo` int(11) NOT NULL,
+  `desp_cap_porc_ajustado` int(11) NOT NULL,
+  PRIMARY KEY  (`iddesp_capital`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+-- 
+-- Extraindo dados da tabela `desp_capital`
+-- 
+
+INSERT INTO `desp_capital` (`iddesp_capital`, `tipo_desp_capital`, `desp_cap_ano`, `desp_cap_periodo`, `desp_cap_prev_ajustado`, `desp_cap_prev_periodo`, `desp_cap_exec_periodo`, `desp_cap_total_prev_ajustado`, `desp_cap_total_prev_periodo`, `desp_cap_total_exec_periodo`, `desp_cap_porc_periodo`, `desp_cap_porc_ajustado`) VALUES 
+(1, 'Depósito Judiciais', 2014, '2014-02-10', 900, 300, 800, 1000, 900, 500, 90, 50),
+(2, 'Bens Móveis', 2013, '2013-04-10', 200, 900, 5000, 800, 6000, 800, 80, 40),
+(3, 'Encargos Diversos', 2014, '2014-03-12', 400, 700, 900, 2000, 600, 400, 80, 70),
+(4, 'Serviços Profissionais', 2014, '2014-04-09', 400, 350, 800, 950, 8000, 3000, 80, 90);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `desp_correntes`
+-- 
+
+CREATE TABLE `desp_correntes` (
+  `iddesp_correntes` int(11) NOT NULL auto_increment,
+  `tipo_desp_corrente` varchar(50) NOT NULL,
+  `desp_corr_ano` int(11) NOT NULL,
+  `desp_corr_periodo` date NOT NULL,
+  `desp_corr_prev_ajustado` int(11) NOT NULL,
+  `desp_corr_prev_periodo` int(11) NOT NULL,
+  `desp_corr_exec_periodo` int(11) NOT NULL,
+  `desp_corr_total_prev_ajustado` int(11) NOT NULL,
+  `desp_corr_total_prev_periodo` int(11) NOT NULL,
+  `desp_corr_total_exec_periodo` int(11) NOT NULL,
+  `desp_corr_porc_periodo` int(11) NOT NULL,
+  `desp_corr_porc_ajustado` int(11) NOT NULL,
+  PRIMARY KEY  (`iddesp_correntes`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Extraindo dados da tabela `desp_correntes`
+-- 
+
+INSERT INTO `desp_correntes` (`iddesp_correntes`, `tipo_desp_corrente`, `desp_corr_ano`, `desp_corr_periodo`, `desp_corr_prev_ajustado`, `desp_corr_prev_periodo`, `desp_corr_exec_periodo`, `desp_corr_total_prev_ajustado`, `desp_corr_total_prev_periodo`, `desp_corr_total_exec_periodo`, `desp_corr_porc_periodo`, `desp_corr_porc_ajustado`) VALUES 
+(1, 'Pessoal Encargos e Beneficios', 2014, '2014-05-12', 600, 2000, 1000, 600, 400, 5000, 80, 90),
+(2, 'Despesas Operacionais', 2013, '2013-02-12', 700, 800, 9000, 500, 800, 2000, 90, 80);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `rec_capital`
+-- 
+
+CREATE TABLE `rec_capital` (
+  `idrec_capital` int(11) NOT NULL auto_increment,
+  `tipo_rec_capital` varchar(50) NOT NULL,
+  `rec_cap_ano` int(11) NOT NULL,
+  `rec_cap_periodo` date NOT NULL,
+  `rec_cap_prev_ajustado` int(11) NOT NULL,
+  `rec_cap_prev_periodo` int(11) NOT NULL,
+  `rec_cap_exec_periodo` int(11) NOT NULL,
+  `rec_cap_total_prev_ajustado` int(11) NOT NULL,
+  `rec_cap_total_prev_periodo` int(11) NOT NULL,
+  `rec_cap_total_exec_periodo` int(11) NOT NULL,
+  `rec_cap_porc_periodo` int(11) NOT NULL,
+  `rec_cap_porc_ajustado` int(11) NOT NULL,
+  PRIMARY KEY  (`idrec_capital`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Extraindo dados da tabela `rec_capital`
+-- 
+
+INSERT INTO `rec_capital` (`idrec_capital`, `tipo_rec_capital`, `rec_cap_ano`, `rec_cap_periodo`, `rec_cap_prev_ajustado`, `rec_cap_prev_periodo`, `rec_cap_exec_periodo`, `rec_cap_total_prev_ajustado`, `rec_cap_total_prev_periodo`, `rec_cap_total_exec_periodo`, `rec_cap_porc_periodo`, `rec_cap_porc_ajustado`) VALUES 
+(1, 'Alienação Operação de Crédito', 2013, '2013-04-15', 9000, 200, 2400, 5090, 700, 800, 90, 40),
+(2, 'Saldo de Execução Anterior', 2014, '2014-06-10', 900, 8000, 3000, 700, 800, 200, 100, 50);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estrutura da tabela `rec_correntes`
+-- 
+
+CREATE TABLE `rec_correntes` (
+  `idrec_correntes` int(11) NOT NULL auto_increment,
+  `tipo_rec_corrente` varchar(50) NOT NULL,
+  `rec_corr_ano` int(11) NOT NULL,
+  `rec_corr_periodo_lanc` date NOT NULL,
+  `rec_corr_prev_ajustado` int(11) NOT NULL,
+  `rec_corr_prev_periodo` int(11) NOT NULL,
+  `rec_corr_exec_periodo` int(11) NOT NULL,
+  `rec_corr_total_prev_ajustado` int(11) NOT NULL,
+  `rec_corr_total_prev_periodo` int(11) NOT NULL,
+  `rec_corr_total_exec_periodo` int(11) NOT NULL,
+  `rec_corr_porc_periodo` int(11) NOT NULL,
+  `rec_corr_porc_ajustado` int(11) NOT NULL,
+  PRIMARY KEY  (`idrec_correntes`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Extraindo dados da tabela `rec_correntes`
+-- 
+
+INSERT INTO `rec_correntes` (`idrec_correntes`, `tipo_rec_corrente`, `rec_corr_ano`, `rec_corr_periodo_lanc`, `rec_corr_prev_ajustado`, `rec_corr_prev_periodo`, `rec_corr_exec_periodo`, `rec_corr_total_prev_ajustado`, `rec_corr_total_prev_periodo`, `rec_corr_total_exec_periodo`, `rec_corr_porc_periodo`, `rec_corr_porc_ajustado`) VALUES 
+(1, 'Consulta sintética ordinária', 2014, '2014-06-13', 400, 5000, 500, 800, 950, 8000, 70, 80),
+(2, 'Convênio Entidadades Parceiras', 2014, '2014-06-12', 900, 650, 900, 6000, 980, 600, 90, 30);
