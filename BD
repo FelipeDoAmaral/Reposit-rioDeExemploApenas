@@ -36,7 +36,7 @@ CREATE TABLE `desp_capital` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 -- 
--- Extraindo dados da tabela `desp_capital`
+-- Exxtraindo dados da tabela `desp_capital`
 -- 
 
 INSERT INTO `desp_capital` (`iddesp_capital`, `tipo_desp_capital`, `desp_cap_ano`, `desp_cap_periodo`, `desp_cap_prev_ajustado`, `desp_cap_prev_periodo`, `desp_cap_exec_periodo`, `desp_cap_total_prev_ajustado`, `desp_cap_total_prev_periodo`, `desp_cap_total_exec_periodo`, `desp_cap_porc_periodo`, `desp_cap_porc_ajustado`) VALUES 
